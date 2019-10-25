@@ -13,7 +13,7 @@
 
 		<div class="form-group">
 			{!! Form::label('mobile', 'Celular') !!}
-			{!! Form::text('mobile', null, ['class' => 'form-control', '3001234567' => 'Nombre completo', 'required']) !!}
+			{!! Form::text('mobile', null, ['class' => 'form-control', 'placeholder' => '3001234567', 'required']) !!}
 		</div>
 
 		<div class="form-group">

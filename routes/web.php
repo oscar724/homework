@@ -15,10 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes(['register' => false]);
+Auth::routes();
+// Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+// Route::group(['prefix' => 'admin', 'middleware' => ['auth' => 'admin']], function(){
 Route::group(['prefix' => 'admin'], function(){
 	
 	Route::resource('users', 'UsersController');

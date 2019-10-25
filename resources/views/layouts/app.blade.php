@@ -23,8 +23,11 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark bg-second shadow-sm" style="background-color: #003E84">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}" >
-                    {{ config('Programador de tareas', 'Programador de tareas') }}
+                <a class="navbar-brand">
+                    <img src="images/emtellogo.png">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        {{ config('Programador de tareas', 'Programador de tareas') }}
+                    </a>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -36,7 +39,7 @@
                     </ul>
 
                     <ul class="navbar-nav mc-auto">
-                        <img src="images/emtellogo.png">
+                        
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -77,7 +80,7 @@
         <div class="container-fluid">
             <p class="navbar-text navbar-left">Todos los derechos reservados &copy {{date('Y')}}</p>
             <p class="navbar-text navbar-center">PT v1.0.0</p>
-            <p class="navbar-text navbar-right"><b>Hernán Montoya</b></p>
+            <p class="navbar-text navbar-right"><b>Equipo de desarrollo</b></p>
         </div>
     </nav>
 </footer>

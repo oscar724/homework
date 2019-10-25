@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-secondary" style="background-color: #003E84">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #003E84">
   <a href="https://www.emtel.net.co/" target="_blank">
     <img src="{{ asset('images/emtellogo.png') }}">
   </a>
@@ -20,19 +20,10 @@
           </div>
         </li>
       </li>
-      <li class="nav-item active">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cable Módem</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Enlace físico del CMTS al CM</a>
-            <a class="dropdown-item" href="#">Estados de operación</a>
-          </div>
-        </li>
-      </li>
       <li class="nav-item">
-
-          <a class="nav-link" href="{{ route('users.index') }}">Usuarios</a>
-
+          {{-- @if(Auth::user()->admin()) --}}
+            <a class="nav-link" href="{{ route('users.index') }}">Usuarios</a>
+          {{-- @endif --}}
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Textos</a>

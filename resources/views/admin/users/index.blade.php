@@ -41,7 +41,7 @@
 		</tbody>
 	</table>
 	<div>
-		{!! $users->render("pagination::bootstrap-4") !!}
+		{!! $users->render() !!}
 	</div>
 	<a href="{{ route('users.create') }}" class="btn btn-primary">Registrar nuevo usuario</a><br><br>
 @endsection

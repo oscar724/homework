@@ -14,7 +14,7 @@
 
 		<div class="form-group">
 			{!! Form::label('mobile', 'Celular') !!}
-			{!! Form::text('mobile', $user->email, ['class' => 'form-control', 'required']) !!}
+			{!! Form::text('mobile', $user->mobile, ['class' => 'form-control', 'required']) !!}
 		</div>
 		
 		<div class="form-group">

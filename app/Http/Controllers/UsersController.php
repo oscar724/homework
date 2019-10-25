@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Laracasts\Flash\Flash;
+use App\Http\Requests\UserRequest;
 
 class UsersController extends Controller
 {
@@ -82,13 +83,13 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UserRequest $request, $id)
     {
         $user = User::find($id);
         $user->fill($request->all());
         $user->save();
 
-        Flash::warning('El usuario ' . $user->name . ' se ha editado exitosamente');
+        Flash::success('El usuario ' . $user->name . ' se ha editado exitosamente');
         return redirect()->route('users.index');
     }
 
